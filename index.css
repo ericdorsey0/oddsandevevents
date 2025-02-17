@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  border: solid;
+  height: 3ch;
+}
+h1 {
+  margin: 1ch;
+}
