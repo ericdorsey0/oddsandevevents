@@ -29,6 +29,7 @@ function sortAllNumbers() {
   numberBank = [];
   render();
 }
+
 function NumberForm() {
   const $form = document.createElement("form");
   $form.innerHTML = `
@@ -47,4 +48,18 @@ function NumberForm() {
     }
   });
   return $form;
+}
+
+function SortFirstButton() {
+  const $button = document.createElement("button");
+  $button.textContent = "Sort 1";
+  $button.addEventListener("click", sortFirstNumber);
+  return $button;
+}
+
+function SortAllButton() {
+  const $button = document.createElement("button");
+  $button.textContent = "Sort All";
+  $button.addEventListener("click", sortAllNumbers);
+  return $button;
 }
