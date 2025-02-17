@@ -63,3 +63,30 @@ function SortAllButton() {
   $button.addEventListener("click", sortAllNumbers);
   return $button;
 }
+
+function NumberCount() {
+  const $p = document.createElement("h1");
+  $p.textContent = "Bank";
+  return $p;
+}
+
+function NumberBank() {
+  const $ul = document.createElement("ul");
+  numberBank.forEach((num) => {
+    const $li = document.createElement("li");
+    $li.textContent = num;
+    $ul.appendChild($li);
+  });
+  return $ul;
+}
+
+function OddNumbers() {
+  const $section = document.createElement("section");
+  $section.innerHTML = "<h1>Odd Numbers</h1>";
+  const $ul = document.createElement("ul");
+  oddNumbers.forEach((num) => {
+    const $li = document.createElement("li");
+    $li.textContent = num;
+    $ul.appendChild($LI);
+  });
+}
