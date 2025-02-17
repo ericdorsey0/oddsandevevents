@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
-ul {
+ul{
   border: solid;
   height: 3ch;
+  display: flex;
+  f
+
 }
 h1 {
   margin: 1ch;
+}
+li{align-items: ;
+ flex-grow: 1;
 }

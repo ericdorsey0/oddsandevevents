@@ -8,7 +8,7 @@ function addNumber(num) {
 }
 
 function sortFirstNumber() {
-  if (numberBank.lenghth === 0) return;
+  if (numberBank.length === 0) return;
   const num = numberBank.shift();
   if (num % 2 === 0) {
     evenNumbers.push(num);
@@ -66,7 +66,7 @@ function SortAllButton() {
 
 function NumberCount() {
   const $p = document.createElement("h1");
-  $p.textContent = "Bank";
+  $p.textContent = `BANK`;
   return $p;
 }
 
@@ -87,6 +87,38 @@ function OddNumbers() {
   oddNumbers.forEach((num) => {
     const $li = document.createElement("li");
     $li.textContent = num;
-    $ul.appendChild($LI);
+    $ul.appendChild($li);
   });
+  $section.appendChild($ul);
+  return $section;
 }
+
+function EvenNumbers() {
+  const $section = document.createElement("section");
+  $section.innerHTML = "<h1>Even Numbers</h1>";
+  const $ul = document.createElement("ul");
+  evenNumbers.forEach((num) => {
+    const $li = document.createElement("li");
+    $li.textContent = num;
+    $ul.appendChild($li);
+  });
+  $section.appendChild($ul);
+  return $section;
+}
+
+function render() {
+  const $app = document.querySelector("#app");
+  $app.innerHTML = `
+    <h1>Odds and Events</h1>
+  `;
+
+  $app.appendChild(NumberForm());
+  $app.appendChild(NumberCount());
+  $app.appendChild(NumberBank());
+  $app.appendChild(SortFirstButton());
+  $app.appendChild(SortAllButton());
+  $app.appendChild(OddNumbers());
+  $app.appendChild(EvenNumbers());
+}
+
+render();
