@@ -29,3 +29,22 @@ function sortAllNumbers() {
   numberBank = [];
   render();
 }
+function NumberForm() {
+  const $form = document.createElement("form");
+  $form.innerHTML = `
+    <label>
+      Add a number to the bank:
+      <input type="number" name="number" required />
+    </label>
+    <button type="submit">Add Number</button>
+  `;
+  $form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData($form);
+    const number = parseInt(data.get("number"));
+    if (!isNaN(number)) {
+      addNumber(number);
+    }
+  });
+  return $form;
+}
